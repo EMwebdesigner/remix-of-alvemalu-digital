@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* ALVEMALU Corporate Colors */
+    --petroleum-blue: 193 100% 14.5%; /* #003B4A */
+    --tech-aqua: 184 100% 42%; /* #00C8D7 */
+    --graphite-gray: 0 0% 17%; /* #2B2B2B */
+    --cold-gray: 206 35% 93%; /* #E8EEF2 */
+    --ice-white: 200 43% 98%; /* #F9FBFC */
+
+    /* Base colors mapped to ALVEMALU palette */
+    --background: var(--ice-white);
+    --foreground: var(--graphite-gray);
+
+    --card: var(--cold-gray);
+    --card-foreground: var(--graphite-gray);
+
+    --popover: var(--ice-white);
+    --popover-foreground: var(--graphite-gray);
+
+    --primary: var(--petroleum-blue);
+    --primary-foreground: var(--ice-white);
+
+    --secondary: var(--tech-aqua);
+    --secondary-foreground: var(--petroleum-blue);
+
+    --muted: var(--cold-gray);
+    --muted-foreground: 193 15% 45%;
+
+    --accent: var(--tech-aqua);
+    --accent-foreground: var(--ice-white);
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: var(--ice-white);
+
+    --border: 193 20% 80%;
+    --input: 193 20% 85%;
+    --ring: var(--tech-aqua);
+
+    --radius: 0.75rem;
+
+    /* Shadows */
+    --shadow-sm: 0 2px 4px rgba(0, 59, 74, 0.05);
+    --shadow-md: 0 4px 12px rgba(0, 59, 74, 0.1);
+    --shadow-lg: 0 8px 24px rgba(0, 59, 74, 0.15);
+    --shadow-hover: 0 12px 32px rgba(0, 200, 215, 0.2);
+
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .dark {
+    --background: var(--petroleum-blue);
+    --foreground: var(--ice-white);
+
+    --card: var(--graphite-gray);
+    --card-foreground: var(--ice-white);
+
+    --popover: var(--graphite-gray);
+    --popover-foreground: var(--ice-white);
+
+    --primary: var(--tech-aqua);
+    --primary-foreground: var(--petroleum-blue);
+
+    --secondary: var(--petroleum-blue);
+    --secondary-foreground: var(--ice-white);
+
+    --muted: var(--graphite-gray);
+    --muted-foreground: 193 20% 65%;
+
+    --accent: var(--tech-aqua);
+    --accent-foreground: var(--petroleum-blue);
+
+    --border: 193 30% 25%;
+    --input: 193 30% 25%;
+    --ring: var(--tech-aqua);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .hover-lift {
+    transition: var(--transition-smooth);
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24 px-4 md:px-8;
+  }
+}
