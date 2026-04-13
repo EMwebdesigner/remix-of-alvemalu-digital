@@ -38,7 +38,9 @@ const ContactSection = () => {
                 <div>
                   <h3 className="text-sm font-bold text-icewhite">Teléfono</h3>
                   <a
-                    href="tel:+5491152483469"
+                    href="https://wa.me/5491152483469"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-xs text-icewhite/80 hover:text-aqua transition-colors"
                   >
                     +54 9 11 5248-3469

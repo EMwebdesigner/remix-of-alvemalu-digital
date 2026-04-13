@@ -77,7 +77,7 @@ const HeroSlider = () => {
                   </p>
               </div>
               <Button variant="hero" size="default" asChild>
-                <a href="https://em-webdesigner.netlify.app/" target="_blank" rel="noopener noreferrer"
+                <a href="https://wa.link/wwawh0" target="_blank" rel="noopener noreferrer"
                 className="my-5 py-7" >
                   Solicitar Servicio Ahora
                 </a>
